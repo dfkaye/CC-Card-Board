@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+    <head>
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="css/card-board.css">
+    </head>
+
+<body>
+
+<label for="role">Role:</label>
+<select id="role">
+   <option value="">Any</option>
+    <option value="Student">Student</option>
+    <option value="Advisor">Advisor</option>
+</select>
+
+<label for="golive">Go Live:</label>
+<select id="golive">
+    <option value="">All</option>
+    <option value="1">1</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+</select>
+
+<table id="result"></table> 
+    <p>Highlight a Go Live</p>
+  <button onclick="colorgolive3()">Go Live 3</button> 
+  <button onclick="colorgolive4()">Go Live 4</button> 
+  <button onclick="colorgolive5()">Go Live 5</button> 
+
+<script type="text/javascript" src="js/script.js"></script>
+<!--
+<input type="text" id="field1" value=""/>
+ <button onclick="colorgolive('field1')" >Search Go Live</button> -->
+
+<script>
+
+function colorgolive(goliveinput) {
+    a = document.getElementById(goliveinput).value;
+    b = '"' + ".golive" + a + '"';
+$( "div" ).not ('b')
+  .css( "background", "#121" );
+$( "div" )
+  .filter(".golive5")
+    .css( "border-color", "red" );
+    alert(b);
+}
+
+
+function colorgolive3() {
+$( "div" ).not (".golive3")
+  .css({
+     'color' : '#C4C4C4',
+      "background-color": "#eee",
+      "border-color": "#C4C4C4",
+    });
+$( "div" )
+  .filter(".golive3")
+    .css({
+      "background-color": "#fff",
+      "font-weight": "bolder",
+      "border-color": "#000",
+      'color' : '#000'
+    });
+}
+
+
+function colorgolive4() {
+$( "div" ).not (".golive4")
+  .css({
+     'color' : '#C4C4C4',
+      "background-color": "#eee",
+      "border-color": "#C4C4C4",
+    });
+$( "div" )
+  .filter(".golive4")
+    .css({
+      "background-color": "#fff",
+      "font-weight": "bolder",
+      "border-color": "#000",
+      'color' : '#000'
+    });
+}
+
+function colorgolive5() {
+$( "div" ).not (".golive5")
+  .css({
+     'color' : '#C4C4C4',
+      "background-color": "#eee",
+      "border-color": "#C4C4C4",
+    });
+$( "div" )
+  .filter(".golive5")
+    .css({
+      "background-color": "#fff",
+      "font-weight": "bolder",
+      "border-color": "#000",
+      'color' : '#000'
+    });
+}
+</script>
+
+</body>
+</html>
