@@ -27,6 +27,8 @@
 
 <table id="result"></table> 
     <p>Highlight a Go Live</p>
+
+	  
   <button onclick="colorgolive3()">Go Live 3</button> 
   <button onclick="colorgolive4()">Go Live 4</button> 
   <button onclick="colorgolive5()">Go Live 5</button> 
@@ -37,6 +39,17 @@
  <button onclick="colorgolive('field1')" >Search Go Live</button> -->
 
 <script>
+$("#product_list").empty();
+$.getJSON("https://spreadsheets.google.com/feeds/list/1hVCZiHJ4jpl3k29_q-mcXKC6ay3Y7D_mxY6SxbhLPgo/od6/public/values?alt=json",
+        function(data){
+          $.each(data.products, function(i,product){
+            content = '<p>' + product.product_title + '</p>';
+            content += '<p>' + product.product_short_description + '</p>';
+            content += '<img src="' + product.product_thumbnail_src + '"/>';
+            content += '<br/>';
+            $(content).appendTo("#product_list");
+          });
+        });
 
 function colorgolive(goliveinput) {
     a = document.getElementById(goliveinput).value;
@@ -53,6 +66,7 @@ $( "div" )
 function colorgolive3() {
 $( "div" ).not (".golive3")
   .css({
+	  "opacity": "1",
      'color' : '#C4C4C4',
       "background-color": "#eee",
       "border-color": "#C4C4C4",
@@ -60,10 +74,16 @@ $( "div" ).not (".golive3")
 $( "div" )
   .filter(".golive3")
     .css({
+		"opacity": "1",
       "background-color": "#fff",
       "font-weight": "bolder",
       "border-color": "#000",
       'color' : '#000'
+    });
+$( "div" )
+  .filter(".golive4, .golive5, .golive6, .golive7")
+    .css({
+      "opacity": "0",
     });
 }
 
@@ -71,6 +91,7 @@ $( "div" )
 function colorgolive4() {
 $( "div" ).not (".golive4")
   .css({
+	  "opacity": "1",
      'color' : '#C4C4C4',
       "background-color": "#eee",
       "border-color": "#C4C4C4",
@@ -78,16 +99,23 @@ $( "div" ).not (".golive4")
 $( "div" )
   .filter(".golive4")
     .css({
+		"opacity": "1",
       "background-color": "#fff",
       "font-weight": "bolder",
       "border-color": "#000",
       'color' : '#000'
+    });
+$( "div" )
+  .filter(".golive5, .golive6, .golive7")
+    .css({
+      "opacity": "0",
     });
 }
 
 function colorgolive5() {
 $( "div" ).not (".golive5")
   .css({
+	  "opacity": "1",
      'color' : '#C4C4C4',
       "background-color": "#eee",
       "border-color": "#C4C4C4",
@@ -95,12 +123,22 @@ $( "div" ).not (".golive5")
 $( "div" )
   .filter(".golive5")
     .css({
+		"opacity": "1",
       "background-color": "#fff",
       "font-weight": "bolder",
       "border-color": "#000",
       'color' : '#000'
     });
+	
+$( "div" )
+  .filter(".golive6, .golive7")
+    .css({
+      "opacity": "0",
+    });
 }
+
+
+
 </script>
 
 </body>

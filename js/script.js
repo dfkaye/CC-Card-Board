@@ -2,7 +2,7 @@ var cards = [
     {
         "card": {
             "name": "Tasks",
-            "role": "Student",
+            "role": "Student, Advisor",
             "role": "Advisor",
             "golive": "1",
             "jiraNumber": "9330"
@@ -89,7 +89,7 @@ function showCards(cards) {
     $result.empty();
     for (var i = 0; i < cards.length; i++) {
         $result.append($('<div class="golive' + cards[i].golive + '">' + cards[i].name + '<br>' + 'Go Live ' + cards[i].golive + '<br><br>' + '<a href="https://jira.berkeley.edu/browse/SISRP-' + cards[i].jiraNumber + '">' + cards[i].jiraNumber + '</a>' + '</div>'  ));
-    }
+	}
 }
 
 onChange();
