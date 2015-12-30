@@ -1,0 +1,52 @@
+[
+  {
+    "card": {
+      "name": "Tasks",
+      "role": "Student, Advisor",
+      "role": "Advisor",
+      "golive": "1",
+      "jiraNumber": "9330"
+    }
+  },
+  {
+    "card": {
+      "name": "SIR",
+      "role": "Student",
+      "role": "Advisor",
+      "golive": "3",
+      "jiraNumber": "6561"
+    }
+  },
+  {
+    "card": {
+      "name": "Aid Summary",
+      "role": "Student",
+      "golive": "4",
+      "jiraNumber": ""
+    }
+  },
+  {
+    "card": {
+      "name": "Enrollment",
+      "role": "Student",
+      "golive": "5",
+      "jiraNumber": "12204"
+    }
+  },
+  {
+    "card": {
+      "name": "Advisee Personal Summary",
+      "role": "Advisor",
+      "golive": "5",
+      "jiraNumber": "12053"
+    }
+  },
+  {
+    "card": {
+      "name": "GPA Calculator",
+      "role": "Student",
+      "golive": "6",
+      "jiraNumber": ""
+    }
+  }
+]
